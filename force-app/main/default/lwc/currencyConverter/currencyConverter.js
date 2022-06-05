@@ -29,9 +29,10 @@ export default class CurrencyConverter extends LightningElement {
   }
   
   handleConvert(event) {
-    convert({sourceCurrency:this.sourceCurrency, targetCurrency:this.targetCurrency, amount: this.amount}).then(result => {
+    convert({sourceCurrency:this.sourceCurrency, 
+              targetCurrency:this.targetCurrency, 
+              amount: this.amount}).then(result => {
         this.convertedAmount = result;
-        console.log(result);
     });
   }
 
